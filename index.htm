@@ -24,6 +24,11 @@
             rel="stylesheet"
             href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
         />
+        <!-- -----------------------BootStrap_icon.css----------------------------->
+        <link
+            rel="stylesheet"
+            href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
+        />
         <!-- ------------------------------Tailwind.css--------------------------------->
         <link
             rel="stylesheet"
@@ -35,7 +40,40 @@
         <!-- ------------------------------app.css------------------------------>
         <link rel="stylesheet" href="./assets/style/app.css" />
     </head>
+
     <body>
+        <header>
+            <div class="container-fluid d-flex align-items-center px-0">
+                <div
+                    class="search-btn bg-blue-300 d-flex flex-col align-items-center"
+                >
+                    <i class="bi bi-cloud-sun"></i>
+                    <p>Roshanak</p>
+                </div>
+                <div class="search-input d-flex align-items-center">
+                    <i class="bi bi-geo-alt-fill ml-3"></i>
+                    <input
+                        type="text"
+                        class="inputElem"
+                        placeholder="Eenter your city..."
+                    />
+                </div>
+                <div
+                    class="date d-flex align-items-center justify-content-center"
+                >
+                    <div class="day d-flex align-items-baseline me-2">
+                        <i class="bi bi-clock"></i>
+                        <span class="">sunday</span>
+                    </div>
+                    <div class="time">
+                        <span class="hour">12 :</span>
+                        <span class="minute">26</span>
+                        <span class="pm-am">AM</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
         <!--------------------script.js----------------------->
         <script src="node_modules/chart.js/dist/chart.js"></script>
         <!--------------------script.js----------------------->

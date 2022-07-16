@@ -1,0 +1,64 @@
+:root {
+    --header-color: #43415b;
+    --btn-color: #52acc4;
+    --cover-color: #42405a;
+    --text: #fcfbfe;
+    --text-light: #8c8b9e;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Product Sans Regular";
+}
+
+header{
+    background-color: var(--header-color);
+}
+
+.search-btn {
+    padding: 0.1rem 0.9rem;
+    background-color: var(--btn-color);
+    color: var(--text);
+}
+.search-btn p {
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+.search-btn i {
+    font-size: 1.9rem;
+    transform: rotateY(180deg);
+}
+.search-input {
+    width: 85%;
+    height: 66px;
+    border-right: 3px solid #6968795e;
+}
+
+.search-input input {
+    width: 100%;
+    height: 50px;
+    padding: 0 0.4rem;
+    background-color: var(--header-color);
+    color: var(--text);
+}
+.search-input i {
+    font-size: 1rem;
+    color: var(--text);
+}
+.search-input input:focus {
+    border: none;
+    outline: none;
+}
+.date {
+    width: 15%;
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.day i {
+    font-size: 0.9rem;
+    margin: 0 0.3rem;
+}
