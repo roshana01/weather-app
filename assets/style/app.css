@@ -8,14 +8,20 @@
 
 * {
     box-sizing: border-box;
+    color: var(--text);
 }
 
 body {
     font-family: "Product Sans Regular";
 }
 
-header{
+/* header */
+
+header {
+    width: 100%;
     background-color: var(--header-color);
+    position: fixed;
+    top: 0;
 }
 
 .search-btn {
@@ -61,4 +67,66 @@ header{
 .day i {
     font-size: 0.9rem;
     margin: 0 0.3rem;
+}
+
+/* main */
+
+main {
+    background-image: url("../img/new york.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -85px;
+    height: 100vh;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    padding-top: 75px;
+    background: linear-gradient(180deg, #272438b6 0%, #23203afd 74%);
+}
+.information {
+    width: 100%;
+}
+.temp {
+    width: 30%;
+    font-size: 7rem;
+    font-family: "Product Sans Thin Regular";
+    border-right: 3px solid #6968795e;
+}
+
+.temp .icon {
+    width: 185px;
+    height: 130px;
+}
+.temp img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+.temp span {
+    position: relative;
+}
+
+.temp span::after {
+    content: "°";
+    position: absolute;
+    top: 15px;
+    right: -9px;
+    font-size: 4rem;
+}
+
+.city-name {
+    width: 30%;
+    text-transform: capitalize;
+}
+.city-name p {
+    font-size: 0.9rem;
+    font-style: italic;
+    font-family: "Product Sans Light Regular";
+    letter-spacing: 2px;
+}
+.city-name h1 {
+    font-size: 3.5rem;
+    font-family: "Product Sans Thin Regular";
 }
