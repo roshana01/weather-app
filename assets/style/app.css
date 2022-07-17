@@ -93,11 +93,12 @@ section {
     font-size: 7rem;
     font-family: "Product Sans Thin Regular";
     border-right: 3px solid #6968795e;
+    margin-right: 1.5rem;
+    padding-right: 1rem;
 }
 
 .temp .icon {
-    width: 185px;
-    height: 130px;
+    width: 50%;
 }
 .temp img {
     width: 100%;

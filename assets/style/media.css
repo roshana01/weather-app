@@ -1,0 +1,74 @@
+@media screen and (max-width: 1085px) {
+    .date {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .temp {
+        font-size: 3.5rem;
+    }
+    .temp .icon {
+        width: 45%;
+    }
+
+    .temp span:after {
+        top: -7px;
+        right: -15px;
+        font-size: 3.5rem;
+    }
+
+    .city-name p {
+        font-size: 0.7rem;
+    }
+    .city-name h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .search-btn,
+    .date {
+        display: none !important;
+    }
+
+    .search-input {
+        width: 100%;
+        height: 50px;
+        border: none;
+    }
+    .information {
+        flex-direction: column;
+    }
+
+    .city-name {
+        width: 100%;
+        text-align: center;
+    }
+    .city-name p {
+        font-size: 0.8rem;
+        padding: 0.5rem 0;
+    }
+    .city-name h1 {
+        font-size: 2.3rem;
+    }
+    .temp {
+        font-size: 4rem;
+        width: 90%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+        padding-right: 0;
+        padding-bottom: 1rem;
+        border-right: none;
+        border-bottom: 3px solid #6968795e;
+    }
+    .temp .icon {
+        width: 28% !important;
+    }
+
+    .temp span:after {
+        top: -7px;
+        right: -15px;
+        font-size: 3.5rem;
+    }
+}
