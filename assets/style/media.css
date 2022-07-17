@@ -5,6 +5,15 @@
 }
 
 @media screen and (max-width: 768px) {
+    main{
+        /* background-image: url('../img/new york 2.jpg'); */
+        background-position-y: 20px;
+    }
+
+    .information{
+        margin-top: 3rem;
+    }
+
     .temp {
         font-size: 3.5rem;
     }
@@ -24,9 +33,39 @@
     .city-name h1 {
         font-size: 2.2rem;
     }
+
+    .Climatic .box{
+        padding: 1rem  3rem;
+    }
+    .box img{
+        width: 30px;
+        height: 30px;
+    }
+    .box span{
+        font-size: .7rem;
+    }
+
+    .chart-container{
+        margin-top: 4rem;
+    }
+
+    .Climatic{
+        margin-top: 4rem;
+    }
+
+    .city-name i{
+        font-size: 1.2rem;
+        position: absolute;
+        left: -20px;
+        top: 12px;
+    }
+    
 }
 
 @media screen and (max-width: 460px) {
+    main{
+        background-position-x: -60px;
+    }
     .search-btn,
     .date {
         display: none !important;
@@ -61,6 +100,7 @@
         padding-bottom: 1rem;
         border-right: none;
         border-bottom: 3px solid #6968795e;
+        
     }
     .temp .icon {
         width: 28% !important;
@@ -70,5 +110,32 @@
         top: -7px;
         right: -15px;
         font-size: 3.5rem;
+    }
+    .Climatic {
+        padding:0 3rem;
+    }
+    .Climatic .box{
+        padding:.3rem  1rem;
+        overflow-x: scroll;
+
+    }
+    .box div{
+        margin-right: 1rem;
+    }
+
+    .box img{
+        width: 15px;
+        height: 15px;
+    }
+    .box span{
+        font-size: .8rem;
+        padding: .2rem;
+    }
+
+    .city-name i{
+        font-size: 1.1rem;
+        position: absolute;
+        left: 104px;
+        top: 16px;
     }
 }
