@@ -163,4 +163,11 @@
     .Climatic .box {
         margin-top: 5.2rem;
     }
+    
+    .Climatic {
+        padding: 0 1rem;
+    }
+    .chart-container {
+        padding: 0 0.2rem;
+    }
 }
