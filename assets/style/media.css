@@ -1,25 +1,23 @@
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 912px) {
     .date {
         flex-direction: column;
     }
-}
 
-@media screen and (max-width: 768px) {
     main {
-        /* background-image: url('../img/new york 2.jpg'); */
         background-position-y: 20px;
     }
 
     .information {
-        margin-top: 3rem;
+        margin-top: 7rem;
+        padding: 0 0.5rem;
     }
 
     .temp {
-        font-size: 3.5rem;
-        padding-right:13px ;
+        font-size: 5rem;
+        padding-right: 13px;
     }
     .temp .icon {
-        width: 45%;
+        width: 50%;
     }
 
     .temp span:after {
@@ -32,28 +30,7 @@
         font-size: 0.7rem;
     }
     .city-name h1 {
-        font-size: 2rem;
-    }
-
-    .Climatic .box {
-        padding: 1rem 3rem;
-    }
-    .box img {
-        width: 30px;
-        height: 30px;
-    }
-    .box span {
-        font-size: .8rem;
-    }
-
-    .chart-container {
-        margin-top: 4rem;
-    }
-
-    .Climatic {
-        margin-top: 5rem;
-        padding: 0 2rem;
-        
+        font-size: 2.5rem;
     }
 
     .city-name i {
@@ -62,16 +39,30 @@
         left: -20px;
         top: 12px;
     }
-
-    .chart-container {
-        position: relative;
-        width: 100%;
-        height: 110px;
-        margin: auto;
+    .Climatic {
         margin-top: 5rem;
         padding: 0 2rem;
     }
-    
+
+    .Climatic .box {
+        padding: 2.7rem 3rem;
+        margin-top: 10rem;
+    }
+    .box img {
+        width: 30px;
+        height: 30px;
+    }
+    .box span {
+        font-size: 1rem;
+    }
+
+    .chart-container {
+        width: 100%;
+        height: 110px;
+        margin: auto;
+        margin-top: 10rem;
+        padding: 0 2rem;
+    }
 }
 
 @media screen and (max-width: 460px) {
@@ -93,22 +84,6 @@
         margin-top: 2rem;
     }
 
-    .city-name {
-        width: 100%;
-        text-align: center;
-    }
-    .city-name p {
-        font-size: 0.8rem;
-        padding: 0.5rem 0;
-    }
-    .city-name h1 {
-        font-size: 2.3rem;
-    }
-
-    .city-name h1::before {
-        content: url("../../node_modules/bootstrap-icons/icons/geo-alt-fill-white-SM.svg");
-    }
-
     .temp {
         font-size: 4rem;
         width: 90%;
@@ -128,6 +103,37 @@
         right: -15px;
         font-size: 3.5rem;
     }
+    .city-name {
+        width: 100%;
+        text-align: center;
+    }
+    .city-name p {
+        font-size: 0.8rem;
+        padding: 0.5rem 0;
+    }
+    .city-name h1 {
+        font-size: 2.3rem;
+    }
+
+    .city-name h1::before {
+        content: url("../../node_modules/bootstrap-icons/icons/geo-alt-fill-white-SM.svg");
+    }
+
+    .city-name i {
+        font-size: 1.1rem;
+        position: absolute;
+        left: 104px;
+        top: 16px;
+    }
+    .chart-container {
+        position: relative;
+        width: 95%;
+        height: 85px;
+        margin: auto;
+        margin-top: 3.5rem;
+        padding: 0 0.9rem;
+    }
+
     .Climatic {
         padding: 0 2rem;
     }
@@ -147,19 +153,14 @@
         font-size: 0.8rem;
         padding: 0.2rem;
     }
+}
 
-    .city-name i {
-        font-size: 1.1rem;
-        position: absolute;
-        left: 104px;
-        top: 16px;
+@media screen and (max-width: 390px) {
+    .information {
+        margin-top: 1rem;
     }
-    .chart-container {
-        position: relative;
-        width: 95%;
-        height: 85px;
-        margin: auto;
-        margin-top: 3.5rem;
-        padding: 0 .9rem;
+
+    .Climatic .box {
+        margin-top: 5.2rem;
     }
 }
