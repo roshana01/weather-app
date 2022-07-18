@@ -150,7 +150,9 @@ section {
 }
 
 .city-name h1::before {
-    content: url('../../node_modules/bootstrap-icons/icons/geo-alt-fill.svg');
+    content: url('../../node_modules/bootstrap-icons/icons/geo-alt-fill-white-L.svg');
+    width: 40px;
+    height: 40px;
     top: 0;
     left: 0;
     color: var(--text);
