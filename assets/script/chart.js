@@ -12,7 +12,7 @@ const saleChart = new Chart(saleChartElem, {
         datasets: [
             {
                 label: "",
-                data: [10, 5, 12, 20, 18, 13,22,5],
+                data: [20, 35, 22, 20, 38, 23,42,5],
                 pointBorderColor: "rgb(255,255,255)",
                 // pointBackgroundColor: 'rgb(255,255,255)',
                 pointBorderWidth: 2,
@@ -26,11 +26,12 @@ const saleChart = new Chart(saleChartElem, {
         ],
     },
     options: {
+        maintainAspectRatio: false,
         scales: {
             usersY: {
                 position: "left",
-                min: -20,
-                max: 100,
+                min: -10,
+                max: 60,
                 display: false,
             },
             xAxis: {
