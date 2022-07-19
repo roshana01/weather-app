@@ -43,7 +43,10 @@ header {
 
 .search-btn {
     padding: 0.1rem 0.9rem;
-    background-color: var(--btn-color);
+    /* background-color: var(--btn-color); */
+    
+    background-color:#adc6e0;
+   
     color: var(--text);
 }
 .search-btn p {
@@ -208,6 +211,7 @@ section {
 
 .chart-box p{
     font-size: .9rem;
+    color: var(--text-light);
 
 }
 

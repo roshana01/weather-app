@@ -115,9 +115,9 @@ var options = {
                 },
                 value: {
                     formatter: function (val) {
-                        return parseInt(val) + "%";
+                        return parseInt(val) ;
                     },
-                    color: "#111",
+                    color: "#8879B0",
                     fontSize: "33px",
                     show: true,
                 },
@@ -192,9 +192,9 @@ var options = {
                 },
                 value: {
                     formatter: function (val) {
-                        return parseInt(val) + "%";
+                        return parseInt(val);
                     },
-                    color: "#111",
+                    color: "#8879B0",
                     fontSize: "38px",
                     show: true,
                 },
@@ -275,9 +275,9 @@ var options = {
                 },
                 value: {
                     formatter: function (val) {
-                        return parseInt(val) + "%";
+                        return parseInt(val);
                     },
-                    color: "#111",
+                    color: "#8879B0",
                     fontSize: "33px",
                     show: true,
                 },
