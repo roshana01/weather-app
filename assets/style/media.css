@@ -1,9 +1,11 @@
+
 @media screen and (max-width: 912px) {
     .date {
         flex-direction: column;
     }
 
     main {
+        height: 1180px;
         background-position-y: 20px;
     }
 
@@ -68,6 +70,7 @@
 @media screen and (max-width: 460px) {
     main {
         background-position-x: -60px;
+        height: 925px;
     }
     .search-btn,
     .date {
@@ -156,6 +159,11 @@
 }
 
 @media screen and (max-width: 390px) {
+    main{
+        height: 844px;
+
+    }
+
     .information {
         margin-top: 1rem;
     }
