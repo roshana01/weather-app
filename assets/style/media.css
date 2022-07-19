@@ -65,6 +65,22 @@
         margin-top: 10rem;
         padding: 0 2rem;
     }
+
+    .chart-apex{
+        padding-right: 0;
+        margin-left: 2rem;
+    }
+
+    .chart-box{
+        width: 40%;
+        justify-content: flex-end;
+    }
+
+    .chart-box .chart{
+        width: 60%;
+    }
+    
+
 }
 
 @media screen and (max-width: 460px) {
@@ -159,7 +175,19 @@
     .chart-apex{
         flex-direction: column;
         align-items: flex-end;
+        padding: 0  .5rem;
     }
+    .chart-box{
+        width: 100%;
+        justify-content: flex-end;
+    }
+    
+    .chart-box .chart{
+        width: 40%;
+        margin-right: 5rem;
+    }
+    
+
 }
 
 @media screen and (max-width: 390px) {

@@ -66,7 +66,7 @@ const saleChart = new Chart(saleChartElem, {
 var options = {
     series: [65],
     chart: {
-        height: 200,
+        height: 180,
         type: "radialBar",
         toolbar: {
             show: false,
@@ -109,23 +109,23 @@ var options = {
                 show: true,
                 name: {
                     offsetY: -10,
-                    show: true,
+                    show: false,
                     color: "#a7a5a5ee",
                     fontSize: "15px",
                 },
                 value: {
                     formatter: function (val) {
-                        return parseInt(val);
+                        return parseInt(val) + "%";
                     },
                     color: "#111",
-                    fontSize: "36px",
+                    fontSize: "33px",
                     show: true,
                 },
             },
         },
     },
     fill: {
-        colors: ["#9c1fe4c4" ],
+        colors: ["#9c1fe4c4"],
     },
     stroke: {
         lineCap: "round",
@@ -186,28 +186,39 @@ var options = {
                 show: true,
                 name: {
                     offsetY: -10,
-                    show: true,
+                    show: false,
                     color: "#a7a5a5ee",
                     fontSize: "15px",
                 },
                 value: {
                     formatter: function (val) {
-                        return parseInt(val);
+                        return parseInt(val) + "%";
                     },
                     color: "#111",
-                    fontSize: "32px",
+                    fontSize: "38px",
                     show: true,
                 },
             },
         },
     },
     fill: {
-        colors: ["#9c1fe4c4" ],
+        colors: ["#9c1fe4c4"],
     },
     stroke: {
         lineCap: "round",
     },
     labels: ["Percent"],
+
+    responsive: [
+        {
+            breakpoint: 1000,
+            options: {
+                chart: {
+                    height: 180,
+                },
+            },
+        },
+    ],
 };
 
 var chart = new ApexCharts(document.querySelector("#chart2"), options);
@@ -215,7 +226,7 @@ chart.render();
 var options = {
     series: [85],
     chart: {
-        height: 200,
+        height: 180,
         type: "radialBar",
         toolbar: {
             show: false,
@@ -258,24 +269,23 @@ var options = {
                 show: true,
                 name: {
                     offsetY: -10,
-                    show: true,
+                    show: false,
                     color: "#b6b6b6ee",
                     fontSize: "15px",
-                    
                 },
                 value: {
                     formatter: function (val) {
-                        return parseInt(val);
+                        return parseInt(val) + "%";
                     },
                     color: "#111",
-                    fontSize: "32px",
+                    fontSize: "33px",
                     show: true,
                 },
             },
         },
     },
     fill: {
-        colors: ["#9c1fe4c4" ],
+        colors: ["#9c1fe4c4"],
     },
     stroke: {
         lineCap: "round",

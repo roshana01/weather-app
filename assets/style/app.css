@@ -196,3 +196,21 @@ section {
     padding: 2rem 5rem;
     text-align: center;
 }
+
+
+.chart-box{
+    width: 30%;
+}
+
+.chart-box .chart{
+    width: 50%;
+}
+
+.chart-box p{
+    font-size: .9rem;
+
+}
+
+.chart-box .lable{
+    width: 50%;
+}
