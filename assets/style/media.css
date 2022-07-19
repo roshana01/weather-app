@@ -5,7 +5,7 @@
     }
 
     main {
-        height: 1180px;
+        
         background-position-y: 20px;
     }
 
@@ -68,10 +68,10 @@
 }
 
 @media screen and (max-width: 460px) {
-    main {
+    /* main {
         background-position-x: -60px;
         height: 925px;
-    }
+    } */
     .search-btn,
     .date {
         display: none !important;
@@ -156,13 +156,17 @@
         font-size: 0.8rem;
         padding: 0.2rem;
     }
+    .chart-apex{
+        flex-direction: column;
+        align-items: flex-end;
+    }
 }
 
 @media screen and (max-width: 390px) {
-    main{
+    /* main{
         height: 844px;
 
-    }
+    } */
 
     .information {
         margin-top: 1rem;
@@ -178,4 +182,8 @@
     .chart-container {
         padding: 0 0.2rem;
     }
+    .chart-apex{
+        flex-direction: column;
+    }
+  
 }

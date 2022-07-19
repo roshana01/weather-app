@@ -38,6 +38,7 @@ header {
     background-color: var(--header-color);
     position: fixed;
     top: 0;
+    z-index: 100;
 }
 
 .search-btn {
@@ -92,7 +93,7 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: -85px;
-    height: 100vh;
+    height: 100%;
 }
 
 section {
