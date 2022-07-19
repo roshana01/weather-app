@@ -84,10 +84,10 @@
 }
 
 @media screen and (max-width: 460px) {
-    /* main {
-        background-position-x: -60px;
-        height: 925px;
-    } */
+    main {
+        background-position-x: -500px;
+       
+    }
     .search-btn,
     .date {
         display: none !important;
