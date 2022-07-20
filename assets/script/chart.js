@@ -66,7 +66,7 @@ const saleChart = new Chart(saleChartElem, {
 var options = {
     series: [65],
     chart: {
-        height: 180,
+        height: 160,
         type: "radialBar",
         toolbar: {
             show: false,
@@ -115,7 +115,7 @@ var options = {
                 },
                 value: {
                     formatter: function (val) {
-                        return parseInt(val);
+                        return parseInt(val) ;
                     },
                     color: "#8879B0",
                     fontSize: "33px",
@@ -136,16 +136,6 @@ var options = {
         lineCap: "round",
     },
     labels: ["Percent"],
-    responsive: [
-        {
-            breakpoint: 400,
-            options: {
-                chart: {
-                    height: 160,
-                },
-            },
-        },
-    ],
 };
 
 var chart = new ApexCharts(document.querySelector("#chart1"), options);
@@ -221,17 +211,7 @@ var options = {
 
     responsive: [
         {
-            breakpoint: 1000,
-            options: {
-                chart: {
-                    height: 180,
-                },
-            },
-        },
-    ],
-    responsive: [
-        {
-            breakpoint: 400,
+            breakpoint: 1026,
             options: {
                 chart: {
                     height: 160,
@@ -246,7 +226,7 @@ chart.render();
 var options = {
     series: [85],
     chart: {
-        height: 180,
+        height: 160,
         type: "radialBar",
         toolbar: {
             show: false,
@@ -311,16 +291,6 @@ var options = {
         lineCap: "round",
     },
     labels: ["Percent"],
-    responsive: [
-        {
-            breakpoint: 400,
-            options: {
-                chart: {
-                    height: 160,
-                },
-            },
-        },
-    ],
 };
 
 var chart = new ApexCharts(document.querySelector("#chart3"), options);

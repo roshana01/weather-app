@@ -1,6 +1,6 @@
-@media screen and (min-height: 785px) {
+@media screen and (min-height: 785px) and (min-width:1020px){
     main {
-        height: 100vh;
+        height: 110vh;
     }
 }
 
@@ -225,6 +225,7 @@
     }
     .chart-apex {
         flex-direction: column;
-        margin-right: 0rem;
+        margin-right: 0;
+        margin-left: 0;
     }
 }
