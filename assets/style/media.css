@@ -1,11 +1,15 @@
+@media screen and (min-height: 785px) {
+    main {
+        height: 100vh;
+    }
+}
 
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 1024px) {
     .date {
         flex-direction: column;
     }
 
     main {
-        
         background-position-y: 20px;
     }
 
@@ -66,27 +70,38 @@
         padding: 0 2rem;
     }
 
-    .chart-apex{
+    .chart-apex {
         padding-right: 0;
         margin-left: 2rem;
     }
 
-    .chart-box{
+    .chart-box {
         width: 40%;
         justify-content: flex-end;
     }
 
-    .chart-box .chart{
+    .chart-box .chart {
         width: 60%;
     }
-    
-
+}
+@media screen and (max-width: 668px) {
+    .city-name {
+        width: 40%;
+    }
+    .chart-box {
+        width: 50%;
+        justify-content: space-around;
+    }
+    .chart-apex {
+        padding-right: 0;
+        margin-left: 1rem;
+        margin-right: 2rem;
+    }
 }
 
 @media screen and (max-width: 460px) {
     main {
         background-position-x: -500px;
-       
     }
     .search-btn,
     .date {
@@ -172,22 +187,20 @@
         font-size: 0.8rem;
         padding: 0.2rem;
     }
-    .chart-apex{
+    .chart-apex {
         flex-direction: column;
         align-items: flex-end;
-        padding: 0  .5rem;
+        padding: 0 0.5rem;
     }
-    .chart-box{
+    .chart-box {
         width: 100%;
         justify-content: flex-end;
     }
-    
-    .chart-box .chart{
+
+    .chart-box .chart {
         width: 40%;
         margin-right: 4.8rem;
     }
-    
-
 }
 
 @media screen and (max-width: 390px) {
@@ -203,15 +216,14 @@
     .Climatic .box {
         margin-top: 5.2rem;
     }
-    
+
     .Climatic {
         padding: 0 1rem;
     }
     .chart-container {
         padding: 0 0.2rem;
     }
-    .chart-apex{
+    .chart-apex {
         flex-direction: column;
     }
-  
 }

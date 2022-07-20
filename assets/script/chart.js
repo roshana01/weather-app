@@ -115,7 +115,7 @@ var options = {
                 },
                 value: {
                     formatter: function (val) {
-                        return parseInt(val) ;
+                        return parseInt(val);
                     },
                     color: "#8879B0",
                     fontSize: "33px",
@@ -136,6 +136,16 @@ var options = {
         lineCap: "round",
     },
     labels: ["Percent"],
+    responsive: [
+        {
+            breakpoint: 370,
+            options: {
+                chart: {
+                    height: 140,
+                },
+            },
+        },
+    ],
 };
 
 var chart = new ApexCharts(document.querySelector("#chart1"), options);
@@ -217,6 +227,12 @@ var options = {
                     height: 180,
                 },
             },
+            breakpoint: 370,
+            options: {
+                chart: {
+                    height: 140,
+                },
+            },
         },
     ],
 };
@@ -291,6 +307,16 @@ var options = {
         lineCap: "round",
     },
     labels: ["Percent"],
+    responsive: [
+        {
+            breakpoint: 370,
+            options: {
+                chart: {
+                    height: 140,
+                },
+            },
+        },
+    ],
 };
 
 var chart = new ApexCharts(document.querySelector("#chart3"), options);
