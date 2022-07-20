@@ -133,9 +133,9 @@ section {
 .temp span::after {
     content: "°";
     position: absolute;
-    top: 15px;
-    right: -9px;
-    font-size: 4rem;
+    top: 0px;
+    right: -20px;
+    font-size: 4.3rem;
 }
 
 .city-name {
