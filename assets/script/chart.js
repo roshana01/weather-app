@@ -138,10 +138,10 @@ var options = {
     labels: ["Percent"],
     responsive: [
         {
-            breakpoint: 370,
+            breakpoint: 400,
             options: {
                 chart: {
-                    height: 140,
+                    height: 160,
                 },
             },
         },
@@ -227,10 +227,14 @@ var options = {
                     height: 180,
                 },
             },
-            breakpoint: 370,
+        },
+    ],
+    responsive: [
+        {
+            breakpoint: 400,
             options: {
                 chart: {
-                    height: 140,
+                    height: 160,
                 },
             },
         },
@@ -309,10 +313,10 @@ var options = {
     labels: ["Percent"],
     responsive: [
         {
-            breakpoint: 370,
+            breakpoint: 400,
             options: {
                 chart: {
-                    height: 140,
+                    height: 160,
                 },
             },
         },

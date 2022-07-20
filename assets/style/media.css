@@ -225,5 +225,6 @@
     }
     .chart-apex {
         flex-direction: column;
+        margin-right: 0rem;
     }
 }
