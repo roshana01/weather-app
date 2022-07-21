@@ -4,8 +4,8 @@ const hour = document.querySelector(".hour");
 const minute = document.querySelector(".minute");
 const PmAm = document.querySelector(".pm-am");
 const cityCountry = document.querySelector(".city_country");
-const tempNum = document.querySelector(".tempNum");  
-
+const tempNum = document.querySelector(".tempNum");
+const iconImg = document.querySelector(".icon");
 
 let weeks = [
     "Sunday",
@@ -43,7 +43,6 @@ window.addEventListener("load", () => {
         let minutesDate = timeDate.getMinutes();
         minute.innerHTML = minutesDate;
     }, 5000);
-    
 });
 
 // ! seteup search box
@@ -54,19 +53,31 @@ inputElem.addEventListener("keyup", (ev) => {
     if (ev.keyCode === 13) {
         let inputVal = ev.target.value;
         fetch(
-            `https://api.openweathermap.org/data/2.5/forecast?q=${inputVal}&appid=3c0a403646fd939d503b4573507f5a6a`
+            `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=3c0a403646fd939d503b4573507f5a6a`
         )
             .then((res) => {
                 return res.json();
             })
             .then((data) => {
                 console.log(data);
-                let Country = data.city.country;
-                let City = data.city.name;
-                let Temp = Math.floor(data.list[0].main.temp - 273.15);
+                let Country = data.sys.country;
+                let City = data.name;
+                let Temp = Math.floor(data.main.temp - 273.15);
                 cityCountry.innerHTML = `${Country} - ${City}`;
-                tempNum.innerHTML = Temp; 
-                
+                tempNum.innerHTML = Temp;
+                let iconName = data.weather[0].main;
+                iconImg.innerHTML = "";
+
+                if ((data.weather[0].id > 701) & (data.weather[0].id < 781)) {
+                    let html = `<img src="./assets/icon/haze.png"alt=""/>`;
+                    iconImg.insertAdjacentHTML("beforeend", html);
+                } else {
+                    let html = `<img src="./assets/icon/${iconName}.png"alt=""/>`;
+                    iconImg.insertAdjacentHTML("beforeend", html);
+                }
             });
+        inputElem.value = "";
     }
 });
+
+// ! seteup chart weather
