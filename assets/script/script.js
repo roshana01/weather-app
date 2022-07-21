@@ -59,7 +59,6 @@ inputElem.addEventListener("keyup", (ev) => {
                 return res.json();
             })
             .then((data) => {
-                console.log(data);
                 let Country = data.sys.country;
                 let City = data.name;
                 let Temp = Math.floor(data.main.temp - 273.15);
@@ -67,12 +66,12 @@ inputElem.addEventListener("keyup", (ev) => {
                 tempNum.innerHTML = Temp;
                 let iconName = data.weather[0].main;
                 iconImg.innerHTML = "";
-
+                console.log(iconName);
                 if ((data.weather[0].id > 701) & (data.weather[0].id < 781)) {
-                    let html = `<img src="./assets/icon/haze.png"alt=""/>`;
+                    let html = `<img src="/assets/icon/haze.png"alt=""/>`;
                     iconImg.insertAdjacentHTML("beforeend", html);
                 } else {
-                    let html = `<img src="./assets/icon/${iconName}.png"alt=""/>`;
+                    let html = `<img src="/assets/icon/${iconName}.png"alt=""/>`;
                     iconImg.insertAdjacentHTML("beforeend", html);
                 }
             });
