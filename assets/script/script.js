@@ -64,7 +64,7 @@ inputElem.addEventListener("keyup", (ev) => {
                 let Temp = Math.floor(data.main.temp - 273.15);
                 cityCountry.innerHTML = `${Country} - ${City}`;
                 tempNum.innerHTML = Temp;
-                let iconName = data.weather[0].main;
+                let iconName = data.weather[0].main.toLowerCase();
                 iconImg.innerHTML = "";
                 console.log(iconName);
                 if ((data.weather[0].id > 701) & (data.weather[0].id < 781)) {
