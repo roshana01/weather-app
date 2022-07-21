@@ -150,7 +150,7 @@
     }
 
     .city-name h1::before {
-        content: url("../../node_modules/bootstrap-icons/icons/geo-alt-fill-white-SM.svg");
+        content: url("../bootstrap-icons/icons/geo-alt-fill-white-SM.svg");
     }
 
     .city-name i {

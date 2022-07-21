@@ -68,15 +68,10 @@ inputElem.addEventListener("keyup", (ev) => {
                 iconImg.innerHTML = "";
                 console.log(iconName);
                 if ((data.weather[0].id > 701) & (data.weather[0].id < 781)) {
-                    let html = `<img src="./assets/icon/Haze.png"alt=""/>`;
+                    let html = `<img src="./assets/icon/Haze.png" alt=""/>`;
                     iconImg.insertAdjacentHTML("beforeend", html);
-
-                }else if((data.weather[0].id > 801) & (data.weather[0].id < 804)){
-                    let html = `<img src="./assets/icon/Clouds.png"alt=""/>`;
-                    iconImg.insertAdjacentHTML("beforeend", html);
-                }
-                else {
-                    let html = `<img src="../assets/icon/${iconName}.png"alt=""/>`;
+                } else {
+                    let html = `<img src="./assets/icon/${iconName}.png" alt="" />`;
                     iconImg.insertAdjacentHTML("beforeend", html);
                 }
             });
