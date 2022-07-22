@@ -1,38 +1,41 @@
 // ? type: "line",
+var data = {
+    labels: [
+        "day 1",
+        "day 2",
+        "day 3",
+        "day 4",
+        "day 5",
+        "day 6",
+        "day 7",
+        "day 8",
+    ],
 
-const saleChartElem = document.querySelector(".sale-chart");
-const saleChart = new Chart(saleChartElem, {
+    datasets: [
+        {
+            label: "",
+            data: [20, 35, 22, 20, 38, 23, 42, 5],
+            pointBorderColor: "rgb(255,255,255)",
+            // pointBackgroundColor: 'rgb(255,255,255)',
+            pointBorderWidth: 2,
+            borderColor: "#854bdd",
+            borderWidth: 2,
+            yAxisID: "usersY",
+            fill: false,
+            tension: 0.3,
+            drawBorder: false,
+        },
+    ],
+};
+
+let saleChartElem = document.querySelector(".sale-chart");
+let saleChart = new Chart(saleChartElem, {
     // type: 'doughnut',
     // type: 'polarArea',
     // type: 'bar',
     type: "line",
-    data: {
-        labels: [
-            "day 1",
-            "day 2",
-            "day 3",
-            "day 4",
-            "day 5",
-            "day 6",
-            "day 7",
-            "day 8",
-        ],
-        datasets: [
-            {
-                label: "",
-                data: [20, 35, 22, 20, 38, 23, 42, 5],
-                pointBorderColor: "rgb(255,255,255)",
-                // pointBackgroundColor: 'rgb(255,255,255)',
-                pointBorderWidth: 2,
-                borderColor: "#854bdd",
-                borderWidth: 2,
-                yAxisID: "usersY",
-                fill: false,
-                tension: 0.3,
-                drawBorder: false,
-            },
-        ],
-    },
+    data: data,
+
     options: {
         maintainAspectRatio: false,
         scales: {
@@ -60,11 +63,16 @@ const saleChart = new Chart(saleChartElem, {
         },
     },
 });
+function updateChartLine(val1) {
+    saleChart.data.labels[0] = val1;
+    saleChart.update();
+}
 
 // ? type: "radialBar"
 
 var options = {
-    series: [65],
+    series: [20],
+
     chart: {
         height: 160,
         type: "radialBar",
@@ -115,7 +123,7 @@ var options = {
                 },
                 value: {
                     formatter: function (val) {
-                        return parseInt(val) ;
+                        return parseInt(val);
                     },
                     color: "#8879B0",
                     fontSize: "33px",
@@ -138,10 +146,16 @@ var options = {
     labels: ["Percent"],
 };
 
-var chart = new ApexCharts(document.querySelector("#chart1"), options);
-chart.render();
+var chart1 = new ApexCharts(document.querySelector("#chart1"), options);
+chart1.render();
+function updateChart(val) {
+    chart1.updateOptions({
+        series: [val],
+    });
+}
+
 var options = {
-    series: [45],
+    series: [26],
     chart: {
         height: 200,
         type: "radialBar",
@@ -221,10 +235,10 @@ var options = {
     ],
 };
 
-var chart = new ApexCharts(document.querySelector("#chart2"), options);
-chart.render();
+var chart2 = new ApexCharts(document.querySelector("#chart2"), options);
+chart2.render();
 var options = {
-    series: [85],
+    series: [46],
     chart: {
         height: 160,
         type: "radialBar",
@@ -293,5 +307,5 @@ var options = {
     labels: ["Percent"],
 };
 
-var chart = new ApexCharts(document.querySelector("#chart3"), options);
-chart.render();
+var chart3 = new ApexCharts(document.querySelector("#chart3"), options);
+chart3.render();

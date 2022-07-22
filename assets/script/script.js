@@ -6,6 +6,13 @@ const PmAm = document.querySelector(".pm-am");
 const cityCountry = document.querySelector(".city_country");
 const tempNum = document.querySelector(".tempNum");
 const iconImg = document.querySelector(".icon");
+//!chart
+const windSpeed = document.querySelector(".speed");
+const windDir = document.querySelector(".wind-dir");
+const humidity = document.querySelector(".humidity");
+const feels = document.querySelector(".feels");
+const maxTemp = document.querySelector(".max-temp");
+const minTemp = document.querySelector(".min-temp");
 
 let weeks = [
     "Sunday",
@@ -47,12 +54,12 @@ window.addEventListener("load", () => {
 
 // ! seteup search box
 
-inputElem.addEventListener("keyup", (ev) => {
+inputElem.addEventListener("keyup", async (ev) => {
     //
     // console.log(ev.target.value);
     if (ev.keyCode === 13) {
         let inputVal = ev.target.value;
-        fetch(
+        await fetch(
             `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=3c0a403646fd939d503b4573507f5a6a`
         )
             .then((res) => {
@@ -74,6 +81,11 @@ inputElem.addEventListener("keyup", (ev) => {
                     let html = `<img src="./assets/icon/${iconName}.png" alt="" />`;
                     iconImg.insertAdjacentHTML("beforeend", html);
                 }
+                // !chart footer
+
+                let speed = Math.floor(data.wind.speed);
+                updateChart(speed);
+                windSpeed.innerHTML = `Speed : ${speed} km/h`;
             });
         inputElem.value = "";
     }
