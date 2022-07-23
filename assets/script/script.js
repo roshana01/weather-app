@@ -12,6 +12,7 @@ const humidity = document.querySelector(".humidity");
 const feels = document.querySelector(".feels");
 const maxTemp = document.querySelector(".max-temp");
 const minTemp = document.querySelector(".min-temp");
+const box = document.querySelector(".box");
 
 let weeks = [
     "Sunday",
@@ -119,9 +120,26 @@ inputElem.addEventListener("keyup", async (ev) => {
                     d.setTime(dt * 1000);
                     let resultTume = `${d.getHours()} :00`;
                     newTimeArr.push(resultTume);
-                    console.log(newTimeArr);
                 }
                 updateChartLine(newDataArr, newTimeArr);
+
+                box.innerHTML = "";
+                for (let i = 0; i <= 32; i += 8) {
+                    let dt = data.list[i].dt;
+                    d.setTime(dt * 1000);
+                    let day = weeks[d.getDay()];
+                    let dayIcon = data.list[i].weather[0].main;
+                    let tempWeek = Math.floor(data.list[i].main.temp - 273.15);
+
+                    let html = `<div
+                    class="d-flex flex-column justify-content-center align-items-center"
+                >
+                    <span>${tempWeek}°</span>
+                    <img src="./assets/icon/${dayIcon}.png" alt="" />
+                    <span>${day}</span>
+                </div>`;
+                    box.insertAdjacentHTML("beforeend", html);
+                }
             });
     }
 });
