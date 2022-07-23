@@ -6,7 +6,6 @@ const PmAm = document.querySelector(".pm-am");
 const cityCountry = document.querySelector(".city_country");
 const tempNum = document.querySelector(".tempNum");
 const iconImg = document.querySelector(".icon");
-//!chart
 const windSpeed = document.querySelector(".speed");
 const windDir = document.querySelector(".wind-dir");
 const humidity = document.querySelector(".humidity");
@@ -99,6 +98,8 @@ inputElem.addEventListener("keyup", async (ev) => {
                 updateChart(chartValue);
             });
         inputElem.value = "";
+
+        //! setUp line chart
         fetch(
             `https://api.openweathermap.org/data/2.5/forecast?q=${inputVal}&appid=3c0a403646fd939d503b4573507f5a6a`
         )
@@ -107,14 +108,20 @@ inputElem.addEventListener("keyup", async (ev) => {
                 return res.json();
             })
             .then((data) => {
-                let newArry = new Array();
+                let newDataArr = new Array();
+                let d = new Date();
+                let newTimeArr = [];
                 for (let i = 0; i < 8; i++) {
                     let tepmDays = Math.floor(data.list[i].main.temp - 273.15);
-                    newArry.push(tepmDays);
+                    newDataArr.push(tepmDays);
+
+                    let dt = data.list[i].dt;
+                    d.setTime(dt * 1000);
+                    let resultTume = `${d.getHours()} :00`;
+                    newTimeArr.push(resultTume);
+                    console.log(newTimeArr);
                 }
-                updateChartLine(newArry)
+                updateChartLine(newDataArr, newTimeArr);
             });
     }
 });
-
-// ! seteup chart weather

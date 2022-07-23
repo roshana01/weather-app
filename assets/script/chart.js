@@ -63,10 +63,6 @@ let saleChart = new Chart(saleChartElem, {
         },
     },
 });
-function updateChartLine(val1) {
-    saleChart.data.datasets[0].data = val1;
-    saleChart.update();
-}
 
 // ? type: "radialBar"
 
@@ -149,8 +145,6 @@ var options = {
 var chart1 = new ApexCharts(document.querySelector("#chart1"), options);
 chart1.render();
 
-  
-
 var options = {
     series: [26],
     chart: {
@@ -230,9 +224,7 @@ var options = {
             },
         },
     ],
-
 };
-
 
 var chart2 = new ApexCharts(document.querySelector("#chart2"), options);
 chart2.render();
@@ -309,8 +301,8 @@ var options = {
 var chart3 = new ApexCharts(document.querySelector("#chart3"), options);
 chart3.render();
 
-
-function updateChart(parametr){
+//! update functions
+function updateChart(parametr) {
     chart1.updateOptions({
         series: [parametr[0]],
     });
@@ -320,4 +312,10 @@ function updateChart(parametr){
     chart3.updateOptions({
         series: [parametr[2]],
     });
+}
+
+function updateChartLine(val1, val2) {
+    saleChart.data.datasets[0].data = val1;
+    saleChart.data.labels = val2;
+    saleChart.update();
 }
