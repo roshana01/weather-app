@@ -64,7 +64,7 @@ let saleChart = new Chart(saleChartElem, {
     },
 });
 function updateChartLine(val1) {
-    saleChart.data.labels[0] = val1;
+    saleChart.data.datasets[0].data = val1;
     saleChart.update();
 }
 
@@ -148,11 +148,8 @@ var options = {
 
 var chart1 = new ApexCharts(document.querySelector("#chart1"), options);
 chart1.render();
-function updateChart(val) {
-    chart1.updateOptions({
-        series: [val],
-    });
-}
+
+  
 
 var options = {
     series: [26],
@@ -233,7 +230,9 @@ var options = {
             },
         },
     ],
+
 };
+
 
 var chart2 = new ApexCharts(document.querySelector("#chart2"), options);
 chart2.render();
@@ -309,3 +308,16 @@ var options = {
 
 var chart3 = new ApexCharts(document.querySelector("#chart3"), options);
 chart3.render();
+
+
+function updateChart(parametr){
+    chart1.updateOptions({
+        series: [parametr[0]],
+    });
+    chart2.updateOptions({
+        series: [parametr[1]],
+    });
+    chart3.updateOptions({
+        series: [parametr[2]],
+    });
+}

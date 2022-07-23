@@ -84,10 +84,36 @@ inputElem.addEventListener("keyup", async (ev) => {
                 // !chart footer
 
                 let speed = Math.floor(data.wind.speed);
-                updateChart(speed);
                 windSpeed.innerHTML = `Speed : ${speed} km/h`;
+                let deg = data.wind.deg;
+                windDir.innerHTML = `Wind direction :${deg}°`;
+                let humidityWeather = data.main.humidity;
+                humidity.innerHTML = `Humidity : ${humidityWeather}%`;
+                let feel = Math.floor(data.main.feels_like - 273.15);
+                feels.innerHTML = `Feels like : ${feel}°`;
+                let TempMax = Math.floor(data.main.temp_max - 273.15);
+                maxTemp.innerHTML = `Max Temp: ${TempMax}°`;
+                let TempMin = Math.floor(data.main.temp_min - 273.15);
+                minTemp.innerHTML = `Min Temp: ${TempMin}°`;
+                let chartValue = [speed, humidityWeather, Temp];
+                updateChart(chartValue);
             });
         inputElem.value = "";
+        fetch(
+            `https://api.openweathermap.org/data/2.5/forecast?q=${inputVal}&appid=3c0a403646fd939d503b4573507f5a6a`
+        )
+            .then((res) => {
+                console.log(res);
+                return res.json();
+            })
+            .then((data) => {
+                let newArry = new Array();
+                for (let i = 0; i < 8; i++) {
+                    let tepmDays = Math.floor(data.list[i].main.temp - 273.15);
+                    newArry.push(tepmDays);
+                }
+                updateChartLine(newArry)
+            });
     }
 });
 
