@@ -128,7 +128,7 @@ inputElem.addEventListener("keyup", async (ev) => {
                     let dt = data.list[i].dt;
                     d.setTime(dt * 1000);
                     let day = weeks[d.getDay()];
-                    let dayIcon = data.list[i].weather[0].main;
+                    let dayIcon = data.list[i].weather[0].main.toLowerCase();
                     let tempWeek = Math.floor(data.list[i].main.temp - 273.15);
 
                     let html = `<div
