@@ -97,7 +97,10 @@ inputElem.addEventListener("keyup", async (ev) => {
                 minTemp.innerHTML = `Min Temp: ${TempMin}°`;
                 let chartValue = [speed, humidityWeather, Temp];
                 updateChart(chartValue);
-            });
+            })
+            .catch(()=>{
+                callError()
+            })
         inputElem.value = "";
 
         //! setUp line chart

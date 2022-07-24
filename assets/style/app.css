@@ -7,6 +7,8 @@
 }
 
 * {
+    font-family: "Product Sans Regular";
+
     box-sizing: border-box;
     color: var(--text);
 }
@@ -29,6 +31,7 @@ body {
 ::-webkit-scrollbar-thumb {
     background-color: var(--text-light);
     border-radius: 10px;
+    /* background-color: #9a82dd; */
 }
 
 /* header */
