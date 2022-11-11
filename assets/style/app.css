@@ -95,10 +95,10 @@ header {
 /* main */
 
 main {
-  background-image: url("../img/new york.jpeg");
+  background-image: url("../img/bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -85px;
+  background-position: center;
   height: 100%;
 }
 
