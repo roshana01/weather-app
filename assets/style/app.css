@@ -1,222 +1,209 @@
 :root {
-    --header-color: #43415b;
-    --btn-color: #52acc4;
-    --cover-color: #42405a;
-    --text: #fcfbfe;
-    --text-light: #8c8b9e;
+  --header-color: #43415b;
+  --btn-color: #52acc4;
+  --cover-color: #42405a;
+  --text: #fcfbfe;
+  --text-light: #8c8b9e;
 }
 
 * {
-    font-family: "Product Sans Regular";
-
-    box-sizing: border-box;
-    color: var(--text);
+  font-family: "Product Sans Regular";
+  text-transform: capitalize;
+  box-sizing: border-box;
+  color: var(--text);
 }
 
 body {
-    font-family: "Product Sans Regular";
-    /* background-color: #23203afd; */
+  font-family: "Product Sans Regular";
+  /* background-color: #23203afd; */
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 4px;
+  width: 10px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #ccc;
-    border-radius: 10px;
+  background: #ccc;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--text-light);
-    border-radius: 10px;
-    /* background-color: #9a82dd; */
+  background-color: var(--text-light);
+  border-radius: 10px;
+  /* background-color: #9a82dd; */
 }
 
 /* header */
 
 header {
-    width: 100%;
-    background-color: var(--header-color);
-    position: fixed;
-    top: 0;
-    z-index: 100;
+  width: 100%;
+  background-color: var(--header-color);
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
 
 .search-btn {
-    padding: 0.1rem 0.9rem;
-    /* background-color: var(--btn-color); */
+  padding: 0.1rem 0.9rem;
+  /* background-color: var(--btn-color); */
 
-    background-color: #adc6e0;
+  background-color: #adc6e0;
 
-    color: var(--text);
+  color: var(--text);
 }
 .search-btn p {
-    font-size: 0.7rem;
-    font-weight: 500;
+  font-size: 0.7rem;
+  font-weight: 500;
 }
 .search-btn i {
-    font-size: 1.9rem;
-    transform: rotateY(180deg);
+  font-size: 1.9rem;
+  transform: rotateY(180deg);
 }
 .search-input {
-    width: 85%;
-    height: 66px;
-    border-right: 3px solid #6968795e;
+  width: 85%;
+  height: 66px;
+  border-right: 3px solid #6968795e;
 }
 
 .search-input input {
-    width: 100%;
-    height: 50px;
-    padding: 0 0.4rem;
-    background-color: var(--header-color);
-    color: var(--text);
+  width: 100%;
+  height: 50px;
+  padding: 0 0.4rem;
+  background-color: var(--header-color);
+  color: var(--text);
 }
 .search-input i {
-    font-size: 1rem;
-    color: var(--text);
+  font-size: 1rem;
+  color: var(--text);
 }
 .search-input input:focus {
-    border: none;
-    outline: none;
+  border: none;
+  outline: none;
 }
 .date {
-    width: 15%;
-    font-size: 1rem;
-    color: var(--text);
+  width: 15%;
+  font-size: 1rem;
+  color: var(--text);
 }
 
 .day i {
-    font-size: 0.9rem;
-    margin: 0 0.3rem;
+  font-size: 0.9rem;
+  margin: 0 0.3rem;
 }
 
 /* main */
 
 main {
-    background-image: url("../img/new york.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: -85px;
-    height: 100%;
+  background-image: url("../img/new york.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -85px;
+  height: 100%;
 }
 
 section {
-    width: 100%;
-    height: 100%;
-    padding-top: 75px;
-    background: linear-gradient(180deg, #272438b6 0%, #23203afd 74%);
+  width: 100%;
+  height: 100%;
+  padding-top: 75px;
+  background: linear-gradient(180deg, #272438b6 0%, #23203afd 74%);
 }
 .information {
-    width: 100%;
-    padding: 0 3.5rem;
+  width: 100%;
+  padding: 0 3.5rem;
 }
 .temp {
-    width: 30%;
-    font-size: 7rem;
-    font-family: "Product Sans Thin Regular";
-    border-right: 3px solid #6968795e;
-    margin-right: 2rem;
-    padding-right: 0;
+  width: 30%;
+  font-size: 7rem;
+  font-family: "Product Sans Thin Regular";
+  border-right: 3px solid #6968795e;
+  margin-right: 2rem;
+  padding-right: 0;
 }
 
 .temp .icon {
-    width: 50%;
+  width: 50%;
 }
 .temp img {
-    width: 90%;
-    height: 90%;
-    opacity: 0.6;
+  width: 90%;
+  height: 90%;
+  opacity: 0.6;
 }
 .temp span {
-    position: relative;
+  position: relative;
 }
 
 .temp span::after {
-    content: "°";
-    position: absolute;
-    top: 0px;
-    right: -20px;
-    font-size: 4.3rem;
+  content: "°";
+  position: absolute;
+  top: 0px;
+  right: -20px;
+  font-size: 4.3rem;
 }
 
 .city-name {
-    width: 30%;
-    text-transform: capitalize;
+  width: 30%;
+  text-transform: capitalize;
 }
 .city-name p {
-    font-size: 0.9rem;
-    font-style: italic;
-    font-family: "Product Sans Light Regular";
-    letter-spacing: 2px;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-family: "Product Sans Light Regular";
+  letter-spacing: 2px;
 }
 .city-name h1 {
-    font-size: 3.5rem;
-    font-family: "Product Sans Thin Regular";
-    position: relative;
-    white-space: nowrap;
+  font-size: 3.5rem;
+  font-family: "Product Sans Thin Regular";
+  position: relative;
+  white-space: nowrap;
 }
 
 .city-name h1::before {
-    content: url("../bootstrap-icons/icons/geo-alt-fill-white-L.svg");
-    width: 40px;
-    height: 40px;
-    top: 0;
-    left: 0;
-    color: var(--text);
-    /* font-size: 1.5rem; */
+  content: url("../bootstrap-icons/icons/geo-alt-fill-white-L.svg");
+  width: 40px;
+  height: 40px;
 }
 
-/* .city-name i{
-    font-size: 1.5rem;
-    position: absolute;
-    left: -22px;
-    top: 28px;
-    
-
-} */
-
 .chart-container {
-    position: relative;
-    width: 95%;
-    height: 150px;
-    margin: auto;
-    padding: 0 3.5rem;
+  position: relative;
+  width: 95%;
+  height: 150px;
+  margin: auto;
+  padding: 0 3.5rem;
 }
 
 .Climatic {
-    margin-top: 2.5rem;
-    padding: 0 5rem;
+  margin-top: 2.5rem;
+  padding: 0 5rem;
 }
 .box img {
-    width: 35px;
-    height: 35px;
+  width: 35px;
+  height: 35px;
 }
 .box span {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 .Climatic .box {
-    width: 100%;
-    background-color: var(--cover-color);
-    border-radius: 10px;
-    padding: 2rem 5rem;
-    text-align: center;
+  width: 100%;
+  background-color: var(--cover-color);
+  border-radius: 10px;
+  padding: 2rem 5rem;
+  text-align: center;
 }
 
 .chart-box {
-    width: 30%;
+  width: 30%;
 }
 
 .chart-box .chart {
-    width: 50%;
+  width: 50%;
 }
 
 .chart-box p {
-    font-size: 0.9rem;
-    color: var(--text-light);
+  font-size: 0.9rem;
+  color: var(--text-light);
 }
 
 .chart-box .lable {
-    width: 50%;
+  width: 50%;
 }
